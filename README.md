@@ -125,7 +125,8 @@ npm run build
 npm start   # stdio MCP server (expects env set)
 ```
 
-CI runs typecheck + test + build on Node 20 and 22.
+CI definition: [`ci/github-actions.yml`](./ci/github-actions.yml) (typecheck + test + build on Node 20/22).
+See [`docs/CI.md`](./docs/CI.md) to enable GitHub Actions (requires `workflow` OAuth scope to place the file under `.github/workflows/`).
 
 ## Protocol notes
 
