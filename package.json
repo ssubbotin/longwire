@@ -1,0 +1,58 @@
+{
+  "name": "longwire",
+  "version": "0.1.0",
+  "description": "MCP server that bridges remote MCP clients to a local Grok Build agent over ACP WebSocket",
+  "type": "module",
+  "bin": {
+    "longwire": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "acp",
+    "grok",
+    "xai",
+    "agent",
+    "websocket"
+  ],
+  "author": "Sergey Subbotin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssubbotin/longwire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ssubbotin/longwire/issues"
+  },
+  "homepage": "https://github.com/ssubbotin/longwire#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "ws": "^8.18.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.1",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
