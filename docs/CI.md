@@ -1,0 +1,1 @@
+CI workflow lives in .github/workflows/ci.yml once the GitHub token has the `workflow` scope.
